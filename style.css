@@ -1,0 +1,970 @@
+/* style.css */
+
+header.headeer {
+    background-color: #85b1e6;
+    color: #FFFFFF;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 78px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.Btn_add {
+    width: fit-content;
+    margin-bottom: 20px;
+    background-color: #2bc48a;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: 0;
+    border-radius: 6px;
+    text-decoration: 0;
+    position: absolute;
+    top: 115px;
+    left: 260px;
+}
+
+.Btn_add img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+.Btn_ad {
+    width: fit-content;
+    margin-bottom: 20px;
+    background-color: #2bc48a;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: 0;
+    border-radius: 6px;
+    text-decoration: 0;
+    position: absolute;
+    top: 115px;
+    left: 1172px;
+}
+
+.Btn_ad img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+
+/*tableau*/
+
+table {
+    border-collapse: collapse;
+    color: #404040;
+    position: absolute;
+    top: 180px;
+    left: 260px;
+}
+
+th {
+    font-size: 14.5px;
+    border-bottom: 3px solid #ffcb61;
+    padding: 5px 20px;
+    font-weight: 500;
+}
+
+td {
+    font-weight: 400;
+    padding: 5px 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+tr:nth-child(2n) {
+    background-color: #f6f8f8;
+}
+
+tr:nth-child(2n) td {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+/* Style du bouton de retour */
+
+.back_btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #2a85d0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back_btn img {
+    width: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+/* Interaction du bouton */
+
+.form input[type="submit"]:hover {
+    background-color: #1f6bb8;
+    /* Couleur plus foncée au survol */
+}
+
+
+/* Message d'erreur */
+
+.erreur_message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.back_btn {
+    color: #2bc48a;
+    text-decoration: 0;
+    display: flex;
+    align-items: center;
+}
+
+.back_btn img {
+    height: 16px;
+    margin-right: 5px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.erreur_message {
+    color: red;
+    font-size: 12px;
+}
+
+label {
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid #999;
+    outline: 0;
+    margin-top: 2px;
+}
+
+input:focus {
+    border: 1px solid #ffcb61;
+}
+
+input[type="submit"] {
+    margin-top: 25px;
+    background-color: #2bc48a;
+    border: 1px solid #2bc48a;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    max-width: 400px;
+    /* Limite la largeur maximale */
+    width: 90%;
+    /* S'assure qu'il est réactif */
+    max-height: 90vh;
+    /* Limite la hauteur maximale */
+    overflow-y: auto;
+    /* Permet le défilement si le contenu dépasse */
+}
+
+
+/* Styles pour les labels */
+
+.popup label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+
+/* Styles pour les champs de saisie */
+
+.popup input,
+.popup select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+/* Styles pour le bouton */
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Effet de survol pour le bouton */
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+.btnAnnuler {
+    position: absolute;
+    left: 270px;
+}
+
+
+/* Amélioration du style pour le select */
+
+.popup select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI0NDQyI+PHBhdGggZD0iTTcgMTBsNSA1IDUtNSIvPjwvc3ZnPg==') no-repeat right 10px center;
+    background-color: #fff;
+    padding-right: 30px;
+    /* Ajoute un espace pour l'icône de la flèche */
+}
+
+
+/* Optionnel : style pour le conteneur de la popup */
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Styles généraux pour le conteneur */
+
+
+/* Style du footer */
+
+.footer {
+    background-color: #007FA9;
+    /* Couleur de fond en harmonie avec votre en-tête */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Conteneur de la barre de recherche */
+
+.search-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Style de l'input de recherche */
+
+#searchInput {
+    width: 20%;
+    /* Ajuster la largeur selon vos besoins */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 105px;
+    left: 590px;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #2a85d0;
+    /* Couleur de bordure au focus en harmonie avec votre interface */
+}
+
+.iconchercher {
+    position: absolute;
+    top: 115px;
+    left: 825px;
+    cursor: pointer;
+}
+
+
+/* Container principal */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+
+/* Menu latéral */
+
+.sidebar {
+    width: 220px;
+    background-color: #2a85d0;
+    padding: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1f6bb8;
+}
+
+
+/* Contenu principal */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #f6f8f8;
+}
+
+
+/* Style du formulaire */
+
+.form {
+    background-color: #ffffff;
+    padding: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: absolute;
+    left: 370px;
+    top: 120px;
+    width: 800px;
+}
+
+.form h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #2a85d0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #1f6bb8;
+}
+
+.back_btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #2a85d0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back_btn img {
+    width: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.Annuler-btn {
+    background-color: #2a85d0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    margin-top: 20px;
+    position: absolute;
+    left: 580px;
+}
+
+.Annuler-btn:hover {
+    background-color: #1f6bb8;
+}
+
+.tableEtab {
+    border-collapse: collapse;
+    color: #404040;
+    position: absolute;
+    top: 180px;
+    left: 300px;
+}
+
+th {
+    font-size: 14.5px;
+    border-bottom: 3px solid #ffcb61;
+    padding: 5px 20px;
+    font-weight: 500;
+}
+
+td {
+    font-weight: 400;
+    padding: 5px 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+img {
+    height: 25px;
+}
+
+tr:nth-child(2n) {
+    background-color: #f6f8f8;
+}
+
+tr:nth-child(2n) td {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.search-searchEtab {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* Style de l'input de recherche */
+
+#searchInputEtab {
+    width: 20%;
+    /* Ajuster la largeur selon vos besoins */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 105px;
+    left: 590px;
+}
+
+#searchInputEtab:focus {
+    outline: none;
+    border-color: #2a85d0;
+    /* Couleur de bordure au focus en harmonie avec votre interface */
+}
+
+.iconchercherEtab {
+    position: absolute;
+    top: 115px;
+    left: 825px;
+    cursor: pointer;
+}
+
+.Btn_addEtab {
+    width: fit-content;
+    margin-bottom: 20px;
+    background-color: #2bc48a;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: 0;
+    border-radius: 6px;
+    text-decoration: 0;
+    position: absolute;
+    top: 115px;
+    left: 260px;
+}
+
+.Btn_addEtab img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+.Btn_adEtab {
+    width: fit-content;
+    margin-bottom: 20px;
+    background-color: #2bc48a;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: 0;
+    border-radius: 6px;
+    text-decoration: 0;
+    position: absolute;
+    top: 115px;
+    left: 1172px;
+}
+
+.Btn_adEtab img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+.formEtab {
+    background-color: #ffffff;
+    padding: 75px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: absolute;
+    left: 370px;
+    top: 120px;
+    width: 800px;
+}
+
+.formEtab h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formEtab-group {
+    margin-bottom: 15px;
+}
+
+.formEtab-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.formEtab-group input[type="text"],
+.formEtab-group input[type="email"],
+.formEtab-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-btnEtab {
+    background-color: #2a85d0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.submit-btnEtab:hover {
+    background-color: #1f6bb8;
+}
+
+.Annuler-btnEtab {
+    background-color: #2a85d0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    margin-top: 20px;
+    position: absolute;
+    left: 580px;
+}
+
+.Annuler-btnEtab:hover {
+    background-color: #1f6bb8;
+}
+
+.back_btnEtab {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #2a85d0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back_btnEtab img {
+    width: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.btnAnnulerEtab {
+    position: absolute;
+    left: 270px;
+}
+
+
+/* **************************** css  competences  ***************************** */
+
+.tableComp {
+    border-collapse: collapse;
+    color: #404040;
+    position: absolute;
+    top: 180px;
+    left: 380px;
+}
+
+th {
+    font-size: 14.5px;
+    border-bottom: 3px solid #ffcb61;
+    padding: 5px 20px;
+    font-weight: 500;
+}
+
+td {
+    font-weight: 400;
+    padding: 5px 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+tr:nth-child(2n) {
+    background-color: #f6f8f8;
+}
+
+tr:nth-child(2n) td {
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.Btn_addComp {
+    width: fit-content;
+    margin-bottom: 20px;
+    background-color: #2bc48a;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: 0;
+    border-radius: 6px;
+    text-decoration: 0;
+    position: absolute;
+    top: 115px;
+    left: 260px;
+}
+
+.Btn_addComp img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+.Btn_adComp {
+    width: fit-content;
+    margin-bottom: 20px;
+    background-color: #2bc48a;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: 0;
+    border-radius: 6px;
+    text-decoration: 0;
+    position: absolute;
+    top: 115px;
+    left: 1172px;
+}
+
+.Btn_adComp img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+.btnAnnulerComp {
+    position: absolute;
+    left: 270px;
+}
+
+.back_btnComp {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #2a85d0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back_btnComp img {
+    width: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.formComp {
+    background-color: #ffffff;
+    padding: 75px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: absolute;
+    left: 370px;
+    top: 120px;
+    width: 800px;
+}
+
+.formComp h2 {
+    color: #302d2d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formComp-group {
+    margin-bottom: 15px;
+}
+
+.formComp-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.formComp-group input[type="text"],
+.formComp-group input[type="email"],
+.formComp-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.submit-btnComp {
+    background-color: #2a85d0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.submit-btnComp:hover {
+    background-color: #1f6bb8;
+}
+
+.Annuler-btnComp {
+    background-color: #2a85d0;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    margin-top: 20px;
+    position: absolute;
+    left: 580px;
+}
+
+.Annuler-btnComp:hover {
+    background-color: #1f6bb8;
+}
+
+.search-searchComp {
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+    /* Ajouter position relative pour que les éléments positionnés en absolu soient basés sur ce conteneur */
+}
+
+
+/* Style de l'input de recherche */
+
+#searchInputComp {
+    width: 20%;
+    /* Ajuster la largeur selon vos besoins */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 105px;
+    left: 590px;
+    /* Positionnement en utilisant le conteneur relatif */
+}
+
+
+/* Style au focus */
+
+#searchInputComp:focus {
+    outline: none;
+    border-color: #2a85d0;
+    /* Couleur de bordure au focus en harmonie avec votre interface */
+}
+
+
+/* Style de l'icône de recherche */
+
+.iconchercherComp {
+    position: absolute;
+    top: 115px;
+    /* Ajuster selon la hauteur de l'input pour aligner correctement */
+    left: 825px;
+    /* Positionner l'icône juste après l'input, ajuster le +10px selon l'espacement souhaité */
+    cursor: pointer;
+    /* Changer le curseur en pointeur pour indiquer que l'icône est cliquable */
+}
+
+.Btn_addAffectation {
+    width: fit-content;
+    margin-bottom: 20px;
+    background-color: #2bc48a;
+    padding: 5px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: 0;
+    border-radius: 6px;
+    text-decoration: 0;
+    position: absolute;
+    top: 115px;
+    left: 260px;
+}
+
+.Btn_addAffectation img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+
+/* Style pour les cases à cocher cochées */
+
+.checkbox-checked {
+    background-color: #4CAF50;
+    /* Couleur de fond pour les cases cochées */
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50;
+    /* Bordure pour les cases cochées */
+}
+
+
+/* Style pour les cases à cocher non cochées */
+
+.checkbox-unchecked {
+    background-color: #f44336;
+    /* Couleur de fond pour les cases non cochées */
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f44336;
+    /* Bordure pour les cases non cochées */
+}
